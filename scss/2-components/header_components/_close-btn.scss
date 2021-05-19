@@ -1,0 +1,17 @@
+.close-btn {
+    background: url("../../../svgs/close-btn.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: to-rem(14);
+    right: 6%;
+
+    height: to-rem(32);
+    width: to-rem(32);
+
+    &:hover {
+        cursor: pointer;
+    }
+}

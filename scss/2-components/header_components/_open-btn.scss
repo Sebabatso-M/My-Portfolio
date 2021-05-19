@@ -1,0 +1,13 @@
+.open-btn{
+    background: url('../../../svgs/menu-btn.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    height: to-rem(28);
+    width: to-rem(40);
+
+    &:hover{
+        cursor: pointer;
+    }
+}

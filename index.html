@@ -7,7 +7,8 @@
 
         <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="./css/main.css" />
-
+        <script defer src="./script/script.js"></script>
+        
         <link
             rel="icon"
             type="image/png"
@@ -19,20 +20,35 @@
     <body>
         <div class="container">
             <header class="header">
-                <img class="logo" src="./svgs/s_.svg" alt="logo" />
-                <nav class="navigation">
-                    <a href="" class="navigation__link">Home</a
-                    ><a href="" class="navigation__link">About Me</a
-                    ><a href="" class="navigation__link">Projects</a
-                    ><a href="" class="navigation__link">Contact Me</a>
-                </nav>
+                <div class="header__inner">
+                    <img class="logo" src="./svgs/s_.svg" alt="logo" />
+
+                    <div class="overlay hidden">
+                        <!-- Close Menu Btn Start -->
+                        <div class="close-btn"></div>
+                        <!-- Close Menu Btn End -->
+                    </div>
+
+                    <!-- Hamburger Menu Start-->
+                    <div class="open-btn"></div>
+                    <!-- Hamburger Menu End-->
+
+                    <div class="menu hidden">
+                        <nav class="navigation">
+                            <a href="" class="navigation__link">Home</a
+                            ><a href="" class="navigation__link">About Me</a
+                            ><a href="" class="navigation__link">Projects</a
+                            ><a href="" class="navigation__link">Contact Me</a>
+                        </nav>
+                    </div>
+                </div>
             </header>
 
             <div class="banner">
                 <h1 class="banner__title">Sebabatso Mashego</h1>
+
+                <h2 class="banner__subtitle">Front-end Web Developer<span class="orange-circle">.</span></h2>
                 
-                <h2 class="banner__subtitle">Front-end Web Developer</h2>
-                <span class="orange-circle"></span>
 
                 <svg
                     width="51"
@@ -56,9 +72,8 @@
                         id="arrow-2"
                     />
                 </svg>
-
             </div>
         </div>
-        <div class="container"></div>
+        <div class="containerr"></div>
     </body>
 </html>

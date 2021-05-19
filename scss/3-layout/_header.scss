@@ -1,3 +1,18 @@
 .header{
+    background-color: $d-grey;
+    
+    margin-bottom: to-rem(240);
+    
     position: sticky;
+    top:0;
+}
+
+.header__inner{
+    @include --flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin:0 auto;
+    width:90%;
 }

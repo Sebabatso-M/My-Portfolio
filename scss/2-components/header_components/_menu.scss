@@ -1,0 +1,13 @@
+.menu{
+
+    position: absolute;
+    top: to-rem(150);
+    left:50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    .active{
+        color: $orange;
+    }
+}
