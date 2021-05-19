@@ -2,12 +2,12 @@
     background: $d-grey url('../../svgs/optimized-logo.svg');
     background-repeat: no-repeat;
     background-size: 90%;
-    background-position: center 45%;
+    background-position: center 40%;
     border-bottom-left-radius: to-rem($curve-val);
     color: $l-grey;
     text-align: center;
 
-    padding-bottom: to-rem(100);
+    padding-bottom: to-rem(80);
 
     position: relative;
 }

@@ -1,13 +1,14 @@
-.menu{
-
+.menu {
     position: absolute;
     top: to-rem(150);
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
+
+    transition: opacity 0.3s 0.2s, visibility 0.3s 0.2s;
 
     width: 90%;
 
-    .active{
+    .active {
         color: $orange;
     }
 }

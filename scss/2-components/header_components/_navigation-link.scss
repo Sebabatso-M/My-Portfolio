@@ -1,7 +1,21 @@
-.navigation__link{
+.navigation__link {
     display: block;
     padding: to-rem(10) 0;
 
     font-size: to-rem(32);
     text-align: center;
+    transform: translateX(100%);
+}
+
+.opened {
+    animation: slide 0.3s ease-in-out forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(30%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
