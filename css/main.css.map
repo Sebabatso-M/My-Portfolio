@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": "AQAA,AAAA,CAAC,AAAC,CACE,UAAU,CAAE,UAAU,CACtB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACb,AAED,AAAA,IAAI,AAAC,CACD,gBAAgB,CLJX,OAAkB,CKMvB,WAAW,CJTD,QAAQ,CAAE,UAAU,CIU9B,SAAS,CAAE,IAAI,CAClB,AGXD,AAAA,UAAU,AAAA,CACN,QAAQ,CAAE,QAAQ,CACrB,ACFD,AAAA,OAAO,AAAA,CACH,QAAQ,CAAE,MAAM,CACnB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/0-utilties/_utilities-dir.scss",
+        "../scss/0-utilties/_variables.scss",
+        "../scss/0-utilties/_colors.scss",
+        "../scss/0-utilties/_fonts.scss",
+        "../scss/0-utilties/_functions.scss",
+        "../scss/0-utilties/_mixins.scss",
+        "../scss/1-base/_base-dir.scss",
+        "../scss/1-base/_global.scss",
+        "../scss/2-components/_components-dir.scss",
+        "../scss/3-layout/_layout-dir.scss",
+        "../scss/3-layout/_container.scss",
+        "../scss/3-layout/_header.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

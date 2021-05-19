@@ -1,0 +1,11 @@
+// convert px to rem
+@function to-rem($value){
+    $rem-val: ($value/16) * 1rem;
+    @return $rem-val;
+}
+
+// convert px to em
+@function to-em($value){
+    $em-val: ($value/16) * 1em;
+    @return $em-val;
+}
