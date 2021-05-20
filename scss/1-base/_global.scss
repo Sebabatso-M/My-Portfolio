@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
 body {
     background-color: $l-grey;
 
@@ -16,21 +12,29 @@ body {
     font-weight: 400;
 
     position: relative;
+
+    // overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 
-    &:visited{
+    &:visited {
         color: white;
     }
 }
 
-h1{
+h1 {
     font-size: to-rem(30);
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+// applied to body when menu is open
+.no-scroll{
+    overflow: hidden;
 }

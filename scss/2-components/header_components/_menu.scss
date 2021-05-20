@@ -6,6 +6,7 @@
 
     transition: opacity 0.3s 0.2s, visibility 0.3s 0.2s;
 
+    overflow-x: hidden;
     width: 90%;
 
     .active {
