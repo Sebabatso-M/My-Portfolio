@@ -1,6 +1,10 @@
-.section-title {
+.section-title, .section-subtitle {
     @include set-mb($mb-val-s);
 
     color: $m-grey;
     font-weight: 500;
+}
+
+.section-subtitle{
+    margin-top: to-rem(30);
 }
