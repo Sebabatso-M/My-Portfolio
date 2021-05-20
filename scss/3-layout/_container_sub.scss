@@ -1,4 +1,6 @@
 .container__sub {
+    @include set-mb($mb-val-l);
+    
     background: $d-grey url('../../svgs/optimized-logo.svg');
     background-repeat: no-repeat;
     background-size: 90%;

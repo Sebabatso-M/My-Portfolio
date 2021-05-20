@@ -8,4 +8,9 @@ $breakpoints: (
     'laptop-s': 1024,
     'laptop-m': 1366,
     'laptop-l': 1440,
-)
+);
+
+// bottom margin values for mobile view
+$mb-val-l: 110;
+$mb-val-m: 80;
+$mb-val-s: 50;

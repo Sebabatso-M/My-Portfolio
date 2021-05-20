@@ -1,0 +1,6 @@
+.section-title {
+    @include set-mb($mb-val-s);
+
+    color: $m-grey;
+    font-weight: 500;
+}

@@ -11,3 +11,7 @@
 @mixin fade-in{
     transition: opacity 0.3s, visibility 0.3s;
 }
+
+@mixin set-mb($val){
+    margin-bottom: to-rem($val);
+}
