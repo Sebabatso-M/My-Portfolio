@@ -1,0 +1,12 @@
+.container__sub {
+    background: $d-grey url('../../svgs/optimized-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center 40%;
+    border-bottom-left-radius: to-rem($curve-val);
+    color: $l-grey;
+    text-align: center;
+
+    padding-top: to-rem(260);
+    padding-bottom: to-rem(80);
+}
