@@ -1,7 +1,7 @@
 .container__sub {
     @include set-mb($mb-val-l);
-    
-    background: $d-grey url('../../svgs/optimized-logo.svg');
+
+    background: $d-grey url("../../svgs/optimized-logo.svg");
     background-repeat: no-repeat;
     background-size: 90%;
     background-position: center 40%;
@@ -13,11 +13,11 @@
     padding-bottom: to-rem(80);
 }
 
-.container-head{
+.container-head {
     @include set-mb($mb-val-l + 35);
 }
 
-.container-foot{
+.container-foot {
     background: $d-grey;
     border-top-right-radius: to-rem($curve-val);
     height: 100vh;

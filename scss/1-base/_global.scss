@@ -5,6 +5,8 @@
 }
 
 body {
+animation: blur 0.5s ease-in forwards;
+
     background-color: $l-grey;
 
     font-family: $font-prompt;

@@ -1,0 +1,16 @@
+.arrow{
+    animation: move 0.9s ease-in-out 0.8s 5;
+}
+
+@keyframes move{
+    from{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(to-rem(30));
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
