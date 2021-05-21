@@ -1,7 +1,7 @@
 .banner__title {
     font-weight: 500;
     margin-bottom: to-rem(10);
-    font-size: to-rem(30);
+    font-size: to-rem(28);
 
     @include breakpoint(mobile-m) {
         font-size: to-rem(34);
