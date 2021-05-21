@@ -11,6 +11,7 @@
 
     padding-top: to-rem(260);
     padding-bottom: to-rem(80);
+
 }
 
 .container-head {
@@ -21,4 +22,6 @@
     background: $d-grey;
     border-top-right-radius: to-rem($curve-val);
     height: 100vh;
+
+    position: relative;
 }

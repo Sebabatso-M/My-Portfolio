@@ -2,10 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    &::selection{
+        background: $d-grey;
+        color: white;
+    }
 }
 
 body {
-animation: blur 0.5s ease-in forwards;
+    animation: blur 1s ease-in forwards;
 
     background-color: $l-grey;
 
@@ -15,9 +20,10 @@ animation: blur 0.5s ease-in forwards;
 
     position: relative;
 
-    line-height:1.5;
+    line-height: 1.5;
     scroll-behavior: smooth;
 }
+
 
 a {
     text-decoration: none;
@@ -31,12 +37,16 @@ h1 {
     font-size: to-rem(30);
 }
 
+img{
+    display: inline-block;
+}
+
 .hidden {
     opacity: 0;
     visibility: hidden;
 }
 
 // applied to body when menu is open
-.no-scroll{
+.no-scroll {
     overflow: hidden;
 }

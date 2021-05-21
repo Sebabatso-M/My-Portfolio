@@ -1,0 +1,7 @@
+.socials__icon {
+    height: to-rem(30);
+    margin: 0 to-rem(10);
+    &:hover {
+        transform: scale(1.3);
+    }
+}

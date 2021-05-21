@@ -1,0 +1,13 @@
+.footer {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: to-rem(30);
+}
+
+.socials {
+    @include --flex;
+
+    justify-content: center;
+    align-items: center;
+}
