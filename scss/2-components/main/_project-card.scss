@@ -1,0 +1,50 @@
+.project-card {
+    @include set-mb($mb-val-m);
+
+    background: $white;
+    box-shadow: 0 to-rem(6) to-rem(8) to-rem(2) rgba(116, 116, 116, 0.514);
+    border-radius: to-rem(8);
+    color: $m-grey;
+    width: 100%;
+    overflow: hidden;
+
+    padding-bottom: to-rem(22);
+}
+
+.project-img {
+    @include set-mb(45);
+
+    height: to-rem(250);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-details {
+    padding: 0 to-rem(20);
+}
+
+.project-details__title {
+    @include set-mb(25);
+    font-weight: 500;
+}
+.project-details__desc {
+    @include set-mb(50);
+}
+
+.blogr {
+    .project-img {
+        background-image: url("../../../images/desktop-preview.jpg");
+    }
+}
+
+.huddle {
+    .project-img {
+        background-image: url("../../../images/desktop-design.jpg");
+    }
+}
+
+.base {
+    .project-img {
+        background-image: url("../../../images/desktop-desin.jpg");
+    }
+}

@@ -1,0 +1,72 @@
+%btn {
+    display: block;
+
+    background: $orange;
+    border-radius: to-rem(5);
+    box-shadow: 0 to-rem(4) to-rem(4) rgba(75, 74, 74, 0.514);
+
+    cursor: pointer;
+    border: none;
+    color: $white;
+    font-family: inherit;
+
+    padding: to-rem(12) to-rem(15);
+    min-width: to-rem(150);
+
+    margin-bottom: to-rem(25);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
+.btn {
+    @extend %btn;
+}
+
+
+.buttons-container {
+    @include --flex;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-img {
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: to-rem(4);
+    vertical-align: to-rem(-3);
+}
+
+.resume-btn{
+    margin:0 auto;
+    .btn-img {
+        background-image: url("../../../svgs/link.svg");
+    }
+}
+
+.more-btn {
+    .btn-img {
+        border: 1px solid white;
+    }
+}
+.view-site-btn {
+    .btn-img {
+        background-image: url("../../../svgs/link.svg");
+    }
+}
+
+.source-code-btn {
+    .btn-img {
+        background-image: url("../../../svgs/code.svg");
+    }
+}
