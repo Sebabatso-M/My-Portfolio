@@ -17,4 +17,8 @@
     &:hover {
         cursor: pointer;
     }
+
+    @include breakpoint(mobile-m){
+        right: 8.5%;
+    }
 }

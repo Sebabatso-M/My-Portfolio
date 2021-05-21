@@ -1,14 +1,19 @@
 .project-card {
-    @include set-mb($mb-val-m);
 
     background: $white;
     box-shadow: 0 to-rem(6) to-rem(8) to-rem(2) rgba(116, 116, 116, 0.514);
     border-radius: to-rem(8);
     color: $m-grey;
+    margin:0 auto;
+    margin-bottom: to-rem($mb-val-m);
     width: 100%;
     overflow: hidden;
 
     padding-bottom: to-rem(22);
+
+    @include breakpoint(mobile-l){
+        max-width: to-rem(380);
+    }
 }
 
 .project-img {
@@ -17,6 +22,10 @@
     height: to-rem(250);
     background-size: cover;
     background-position: center;
+
+    @include breakpoint(mobile-l){
+            height: to-rem(300);
+    }
 }
 
 .project-details {

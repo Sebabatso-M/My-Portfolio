@@ -7,6 +7,8 @@ const menu_options = document.querySelectorAll(".navigation__link");
 const scroll_progress_bar = document.querySelector(".scroll-progress");
 const container_head = document.querySelector(".container-head");
 
+const btn_up = document.querySelector(".btn-up");
+
 open_btn.addEventListener("click", () => {
     close_btn.classList.remove("hidden");
     overlay.classList.remove("hidden");
@@ -38,6 +40,14 @@ function scrolled() {
     let scrolled = (scroll / height) * 100;
 
     scroll_progress_bar.style.width = scrolled + "%";
+
+    if (scrolled >= 100) {
+        btn_up.style.opacity = 1;
+        btn_up.style.visibility = "visible";
+    } else {
+        btn_up.style.opacity = 0;
+        btn_up.style.visibility = "hidden";
+    }
 }
 
 window.onscroll = () => {

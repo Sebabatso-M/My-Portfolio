@@ -12,7 +12,20 @@
     padding-top: to-rem(260);
     padding-bottom: to-rem(80);
 
+    @include breakpoint(mobile-m){
+        background-size:80%;
+    }
+    
+    @include breakpoint(mobile-l){
+        background-size:74%;
+    }
+
+    @include breakpoint(mobile-ls){
+        background-size: 68%;
+    }
 }
+
+
 
 .container-head {
     @include set-mb($mb-val-l + 35);

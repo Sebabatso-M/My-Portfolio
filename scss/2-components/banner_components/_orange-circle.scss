@@ -5,4 +5,12 @@
 
     border-radius: 50%;
     color: $orange;
+
+    @include breakpoint(mobile-l) {
+        font-size: to-rem(24);
+    }
+
+    @include breakpoint(mobile-ls) {
+        font-size: to-rem(26);
+    }
 }

@@ -1,3 +1,19 @@
-.banner__title{
+.banner__title {
     font-weight: 500;
+    margin-bottom: to-rem(10);
+    font-size: to-rem(30);
+
+    @include breakpoint(mobile-m) {
+        font-size: to-rem(34);
+    }
+
+    @include breakpoint(mobile-l) {
+        margin-top: to-rem(60);
+        font-size: to-rem(36);
+    }
+
+    @include breakpoint(mobile-ls) {
+        margin-top: to-rem(80);
+        font-size: to-rem(38);
+    }
 }
