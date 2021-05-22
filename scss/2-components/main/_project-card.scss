@@ -10,10 +10,6 @@
 
     padding-bottom: to-rem(22);
 
-    @include breakpoint(mobile-l) {
-        max-width: to-rem(380);
-    }
-
     @include breakpoint(tablet) {
         padding-bottom: 0;
         max-width: to-rem(656);

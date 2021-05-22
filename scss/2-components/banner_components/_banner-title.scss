@@ -1,7 +1,11 @@
 .banner__title {
     font-weight: 500;
-    margin-bottom: to-rem(10);
-    font-size: to-rem(28);
+    margin-bottom: to-rem(5);
+    font-size: to-rem(26);
+
+    @media (min-width: to-em(318)) {
+        font-size: to-rem(28);
+    }
 
     @include breakpoint(mobile-m) {
         font-size: to-rem(32);
@@ -14,11 +18,21 @@
 
     @include breakpoint(mobile-ls) {
         margin-top: to-rem(80);
-        font-size: to-rem(40);
+        font-size: to-rem(44);
     }
 
-    @include breakpoint(tablet){
+    @include breakpoint(tablet) {
         margin-top: to-rem(86);
-        font-size: to-rem(44);
+        font-size: to-rem(48);
+    }
+
+    @include breakpoint(laptop-s) {
+        margin-top: to-rem(90);
+        font-size: to-rem(54);
+    }
+
+    @include breakpoint(laptop-m) {
+        margin-bottom: 0;
+        font-size: to-rem(58);
     }
 }

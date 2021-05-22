@@ -1,31 +1,44 @@
 .container__sub {
     @include set-mb($mb-val-l);
 
-    background: $d-grey url("../../svgs/optimized-logo.svg");
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: center 40%;
+    background:$d-grey;
     border-bottom-left-radius: to-rem($curve-val);
     color: $l-grey;
     text-align: center;
 
-    padding-top: to-rem(260);
-    padding-bottom: to-rem(80);
+    .background {
+        background:  url("../../svgs/optimized-logo.svg");
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: center 40%;
+        padding-top: to-rem(260);
+        padding-bottom: to-rem(80);
+        margin:0 auto;
+        @include breakpoint(mobile-m) {
+            background-size: 80%;
+        }
 
-    @include breakpoint(mobile-m) {
-        background-size: 80%;
-    }
+        @include breakpoint(mobile-l) {
+            background-size: 74%;
+        }
 
-    @include breakpoint(mobile-l) {
-        background-size: 74%;
-    }
+        @include breakpoint(mobile-ls) {
+            background-size: 68%;
+        }
 
-    @include breakpoint(mobile-ls) {
-        background-size: 68%;
-    }
+        @include breakpoint(tablet) {
+            background-size: 50%;
+        }
 
-    @include breakpoint(tablet){
-        background-size: 50%;
+        @include breakpoint(laptop-s) {
+            background-size: 38%;
+            background-position: center 38%;
+        }
+
+        @include breakpoint(laptop-m) {
+            background-size: 34%;
+            max-width: to-rem(1366);
+        }
     }
 }
 
@@ -42,15 +55,15 @@
 
     position: relative;
 
-    @include breakpoint(mobile-s){
+    @include breakpoint(mobile-s) {
         padding-top: to-rem(60);
     }
 
-    @include breakpoint(mobile-s){
+    @include breakpoint(mobile-s) {
         padding-top: to-rem(70);
     }
-    
-    @include breakpoint(mobile-ls){
+
+    @include breakpoint(mobile-ls) {
         padding-top: to-rem(80);
     }
 }

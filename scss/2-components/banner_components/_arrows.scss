@@ -1,5 +1,15 @@
 .arrow{
     animation: move 0.9s ease-in-out 0.5s 5;
+
+    width: to-rem(46);
+
+    @include breakpoint(mobile-m){
+        width: to-rem(48);
+    }
+
+    @include breakpoint(mobile-ls){
+        width: to-rem(51);
+    }
 }
 
 @keyframes move{

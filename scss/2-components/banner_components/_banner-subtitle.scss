@@ -1,8 +1,12 @@
-.banner__subtitle{
-    font-size: to-rem(19);
+.banner__subtitle {
+    font-size: to-rem(16);
     font-weight: 300;
 
     margin-bottom: to-rem(45);
+
+    @media (min-width:to-em(318)) {
+        font-size: to-rem(19);
+    }
 
     @include breakpoint(mobile-l) {
         font-size: to-rem(21);
