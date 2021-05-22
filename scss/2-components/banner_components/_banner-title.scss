@@ -14,6 +14,11 @@
 
     @include breakpoint(mobile-ls) {
         margin-top: to-rem(80);
-        font-size: to-rem(38);
+        font-size: to-rem(40);
+    }
+
+    @include breakpoint(tablet){
+        margin-top: to-rem(86);
+        font-size: to-rem(44);
     }
 }

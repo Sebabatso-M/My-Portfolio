@@ -2,7 +2,7 @@
 
     margin: 0 auto;
     width: 90%;
-    max-width: to-rem(530);
+    max-width: to-rem(600);
 
     @include breakpoint(mobile-m){
         width:85%;

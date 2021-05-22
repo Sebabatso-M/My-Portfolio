@@ -23,6 +23,10 @@
     @include breakpoint(mobile-ls) {
         background-size: 68%;
     }
+
+    @include breakpoint(tablet){
+        background-size: 50%;
+    }
 }
 
 .container-head {

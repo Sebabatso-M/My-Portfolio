@@ -10,4 +10,8 @@
     &:hover{
         cursor: pointer;
     }
+
+    @include breakpoint(tablet){
+        display: none;
+    }
 }

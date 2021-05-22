@@ -9,6 +9,17 @@
     &:hover {
         color: $l-grey;
     }
+
+    @include breakpoint(tablet){
+        transform: translateX(0);
+        display: inline-block;
+        font-size: to-rem(18);
+        position: relative;
+
+        &:not(:last-child){
+            margin: 0 to-rem(8);
+        }
+    }
 }
 
 .opened {
