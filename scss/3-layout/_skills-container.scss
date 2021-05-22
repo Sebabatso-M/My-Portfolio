@@ -3,4 +3,7 @@
 
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    max-width: to-rem(612);
+    margin: 0 auto;
 }

@@ -9,10 +9,10 @@
     border: none;
     color: $white;
     font-family: inherit;
+    text-align: center;
 
-    padding: to-rem(12) to-rem(15);
-    min-width: to-rem(150);
-
+    padding: to-rem(12) 0;
+    width: to-rem(150);
     margin-bottom: to-rem(25);
 
     &:hover {
@@ -68,6 +68,7 @@
 .source-code-btn {
     .btn-img {
         background-image: url("../../svgs/code.svg");
+        margin-left: to-rem(2);
     }
 }
 
@@ -83,4 +84,8 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+}
+
+.submit{
+    box-shadow: 0 to-rem(4) to-rem(4) hsl(14, 100%, 28%);
 }

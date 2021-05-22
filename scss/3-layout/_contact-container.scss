@@ -1,0 +1,14 @@
+.contact-container{
+
+    margin: 0 auto;
+    width: 90%;
+    max-width: to-rem(530);
+
+    @include breakpoint(mobile-m){
+        width:85%;
+    }
+}
+
+.contact-form{
+    @include set-mb($mb-val-m);
+}

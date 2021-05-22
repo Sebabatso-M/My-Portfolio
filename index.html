@@ -295,7 +295,47 @@
         </div>
 
         <div class="container-foot">
-            <div class="contact"></div>
+            <div class="contact-container">
+                <h2 class="contact-title">Contact Me</h2>
+
+                <form class="contact-form">
+                    <div class="form-control">
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                            autocomplete="off"
+                        />
+                        <span class="required">Required Field</span>
+                    </div>
+                    <div class="form-control">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            autocomplete="off"
+                        />
+                        <span class="required">Required Field</span>
+                    </div>
+
+                    <div class="message-container">
+                        <label for="message">Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            placeholder="Your message here..."
+                            autocomplete="off"
+                        ></textarea>
+                        <span class="required">Required Field</span>
+                    </div>
+
+                    <button class="btn submit" type="submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
             <footer class="footer">
                 <div class="socials">
                     <a href="#" target="_blank">

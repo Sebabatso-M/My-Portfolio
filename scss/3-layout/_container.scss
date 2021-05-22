@@ -12,20 +12,18 @@
     padding-top: to-rem(260);
     padding-bottom: to-rem(80);
 
-    @include breakpoint(mobile-m){
-        background-size:80%;
-    }
-    
-    @include breakpoint(mobile-l){
-        background-size:74%;
+    @include breakpoint(mobile-m) {
+        background-size: 80%;
     }
 
-    @include breakpoint(mobile-ls){
+    @include breakpoint(mobile-l) {
+        background-size: 74%;
+    }
+
+    @include breakpoint(mobile-ls) {
         background-size: 68%;
     }
 }
-
-
 
 .container-head {
     @include set-mb($mb-val-l + 35);
@@ -34,7 +32,21 @@
 .container-foot {
     background: $d-grey;
     border-top-right-radius: to-rem($curve-val);
-    height: 100vh;
+    min-height: 100vh;
+
+    padding: to-rem($mb-val-s) 0;
 
     position: relative;
+
+    @include breakpoint(mobile-s){
+        padding-top: to-rem(60);
+    }
+
+    @include breakpoint(mobile-s){
+        padding-top: to-rem(70);
+    }
+    
+    @include breakpoint(mobile-ls){
+        padding-top: to-rem(80);
+    }
 }

@@ -1,0 +1,7 @@
+.contact-title{
+    @include set-mb($mb-val-s);
+
+    color: $white;
+    text-align: center;
+    font-weight: 500;
+}
