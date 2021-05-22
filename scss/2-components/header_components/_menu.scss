@@ -12,6 +12,11 @@
     .active {
         color: $orange;
         font-weight:500;
+
+        &:hover{
+            color: $orange;
+        font-weight:500;
+        }
     }
 
     @include breakpoint(tablet) {

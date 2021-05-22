@@ -1,18 +1,22 @@
 .project-card {
-
     background: $white;
     box-shadow: 0 to-rem(6) to-rem(8) to-rem(2) rgba(116, 116, 116, 0.514);
     border-radius: to-rem(8);
     color: $m-grey;
-    margin:0 auto;
+    margin: 0 auto;
     margin-bottom: to-rem($mb-val-m);
     width: 100%;
     overflow: hidden;
 
     padding-bottom: to-rem(22);
 
-    @include breakpoint(mobile-l){
+    @include breakpoint(mobile-l) {
         max-width: to-rem(380);
+    }
+
+    @include breakpoint(tablet) {
+        padding-bottom: 0;
+        max-width: to-rem(656);
     }
 }
 
@@ -21,23 +25,55 @@
 
     height: to-rem(250);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 
-    @include breakpoint(mobile-l){
-            height: to-rem(300);
+    @include breakpoint(mobile-l) {
+        height: to-rem(300);
+    }
+
+    @include breakpoint(tablet) {
+        height: to-rem(355);
+        // width: 45%;
+        margin-bottom: 0;
     }
 }
 
 .project-details {
     padding: 0 to-rem(20);
+
+    @include breakpoint(tablet) {
+        @include --flex;
+
+        flex-direction: column;
+        // justify-content: space-evenly;
+        // padding-top: to-rem(35);
+    padding: to-rem(35) to-rem(20);
+        // min-height: to-rem(300);
+
+    }
 }
 
 .project-details__title {
     @include set-mb(25);
     font-weight: 500;
+
+    @include breakpoint(mobile-s){
+        font-size: to-rem(20);
+    }
+    @include breakpoint(mobile-l){
+        font-size: to-rem(22);
+    }
 }
 .project-details__desc {
-    @include set-mb(50);
+
+    max-width:  50ch;
+    margin:0 auto;
+    margin-bottom: to-rem(50);
+
+    @include breakpoint(tablet) {
+        @include set-mb(20);
+    }
 }
 
 .blogr {
