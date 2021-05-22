@@ -17,6 +17,10 @@
             color: $orange;
             font-weight: 500;
         }
+
+        &:visited {
+            color: $orange;
+        }
     }
 
     @include breakpoint(tablet) {
