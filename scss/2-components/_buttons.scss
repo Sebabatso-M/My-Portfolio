@@ -87,7 +87,9 @@
 }
 
 .btn-up {
-    background: $white;
+    background: $white url('../../svgs/top.svg');
+    background-position: center;
+    background-size: 120%;
     border: to-rem(3) solid $orange;
     border-radius: 50%;
     width: to-rem(50);

@@ -9,6 +9,11 @@
     }
 }
 
+html{
+    scroll-padding-top: to-rem(80);
+    scroll-behavior: smooth;
+}
+
 body {
     animation: blur 1s ease-in forwards;
 
@@ -21,7 +26,6 @@ body {
     position: relative;
 
     line-height: 1.5;
-    scroll-behavior: smooth;
 }
 
 a {

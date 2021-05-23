@@ -6,6 +6,7 @@ const menu = document.querySelector(".menu");
 const menu_options = document.querySelectorAll(".navigation__link");
 const scroll_progress_bar = document.querySelector(".scroll-progress");
 const container_head = document.querySelector(".container-head");
+const navigation__links = document.querySelectorAll('.navigation__link');
 
 const btn_up = document.querySelector(".btn-up");
 
@@ -21,7 +22,13 @@ open_btn.addEventListener("click", () => {
     });
 });
 
-close_btn.addEventListener("click", () => {
+close_btn.addEventListener("click", close);
+
+navigation__links.forEach((link) =>{
+    link.addEventListener('click', close, false);
+} )
+
+function close() {
     close_btn.classList.add("hidden");
     overlay.classList.add("hidden");
     overlay.classList.remove("opened");
@@ -31,7 +38,7 @@ close_btn.addEventListener("click", () => {
     menu_options.forEach((option) => {
         option.classList.remove("opened");
     });
-});
+}
 
 function scrolled() {
     let scroll = document.documentElement.scrollTop;
@@ -53,3 +60,4 @@ function scrolled() {
 window.onscroll = () => {
     scrolled();
 };
+
