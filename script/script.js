@@ -26,12 +26,6 @@ close_btn.addEventListener("click", close);
 
 navigation__links.forEach((link) => {
     link.addEventListener("click", close, false);
-    link.addEventListener("click", setActiveLink, false);
-});
-
-btn_up.addEventListener("click", () => {
-    removeActive();
-    navigation__links[0].classList.add("active");
 });
 
 arrow_down.addEventListener("click", () => {
@@ -65,6 +59,7 @@ function close() {
     });
 }
 
+// display the scroll progress
 function scrolled() {
     let scroll = document.documentElement.scrollTop;
     let height = container_head.clientHeight;
@@ -81,16 +76,61 @@ function scrolled() {
         btn_up.style.visibility = "hidden";
     }
 
-    setActive(scrolled);
+    setActive(scrolled, height);
 }
 
-function setActive(height){ 
-    if (height>= 100){
-        removeActive();
-        navigation__links[3].classList.add("active");
-    } 
+//sets class to links
+function setActive(scrolled_val, height) {
+    const scrollPadding = window.getComputedStyle(
+        document.documentElement
+    ).scrollPaddingTop;
+
+    const paddingTop = scrollPadding.slice(0, scrollPadding.indexOf("px"));
+
+    const about = document.querySelector(".about-me");
+    const project = document.querySelector(".projects");
+    const contact = document.querySelector(".container-foot");
+
+    const home = navigation__links[0];
+    const aboutSection = navigation__links[1];
+    const projectSection = navigation__links[2];
+    const contactSection = navigation__links[3];
+
+    const s = parseInt(scrolled_val);
+
+    const aboutStart = calcPosPerc(about.offsetTop, paddingTop, height);
+    const projectStart = calcPosPerc(project.offsetTop, paddingTop, height);
+    const contactStart = calcPosPerc(contact.offsetTop, paddingTop, height);
+
+    removeActive();
+
+    if (s < aboutStart) {
+        addClassActive(home);
+
+        return;
+    }
+    if (s >= aboutStart && s < projectStart) {
+        addClassActive(aboutSection);
+
+        return;
+    }
+    if (s >= projectStart && s < contactStart) {
+        addClassActive(projectSection);
+
+        return;
+    }
+    if (s >= contactStart) {
+        addClassActive(contactSection);
+        return;
+    }
 }
 
-window.onscroll = () => {
-    scrolled();
-};
+function addClassActive(element) {
+    element.classList.add("active");
+}
+
+function calcPosPerc(offSet, padding, height) {
+    return Number.parseInt(((offSet - padding) / height) * 100);
+}
+
+window.addEventListener("scroll", scrolled);
