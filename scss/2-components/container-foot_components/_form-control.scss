@@ -15,6 +15,15 @@
         }
     }
 
+    .error {
+        border-color: rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
+    }
+    .success {
+        border-color: rgb(11, 139, 33);
+        color: rgb(11, 139, 33);
+    }
+
     .form-control {
         @include set-mb(10);
 
@@ -30,8 +39,16 @@
     color: $l-grey;
 }
 
+.good {
+    color: rgb(11, 139, 33);
+}
+
+.bad {
+    color: rgb(255, 0, 0);
+}
+
 .message-container {
-@include set-mb(28);
+    @include set-mb(28);
 
     label {
         @include set-mb(14);
@@ -44,7 +61,7 @@
         font-weight: 500;
     }
 
-    textarea{
+    textarea {
         resize: none;
         height: to-rem(150);
     }

@@ -7,7 +7,6 @@ const menu_options = document.querySelectorAll(".navigation__link");
 const scroll_progress_bar = document.querySelector(".scroll-progress");
 const container_head = document.querySelector(".container-head");
 const navigation__links = document.querySelectorAll(".navigation__link");
-const arrow_down = document.querySelector(".arrow");
 const btn_up = document.querySelector(".btn-up");
 
 open_btn.addEventListener("click", () => {
@@ -26,11 +25,6 @@ close_btn.addEventListener("click", close);
 
 navigation__links.forEach((link) => {
     link.addEventListener("click", close, false);
-});
-
-arrow_down.addEventListener("click", () => {
-    removeActive();
-    navigation__links[1].classList.add("active");
 });
 
 function setActiveLink() {
@@ -134,3 +128,143 @@ function calcPosPerc(offSet, padding, height) {
 }
 
 window.addEventListener("scroll", scrolled);
+
+/*******************
+ *   FORM VALIDATION
+ *******************/
+const form = document.querySelector(".contact-form");
+const name_input = document.querySelector("#name");
+const email_input = document.querySelector("#email");
+const message_input = document.querySelector("#message");
+
+function addErrorClass(element) {
+    element.classList.add("error");
+}
+
+function addSuccessClass(element) {
+    element.classList.add("success");
+}
+function addGoodClass(element) {
+    const label = element.nextElementSibling;
+    label.classList.add("good");
+}
+function addBadClass(element) {
+    const label = element.nextElementSibling;
+    label.classList.add("bad");
+}
+function removeErrorClass(element) {
+    element.classList.remove("error");
+}
+
+function removeSuccessClass(element) {
+    element.classList.remove("success");
+}
+
+function removeGoodClass(element) {
+    const label = element.nextElementSibling;
+    label.classList.remove("good");
+}
+function removeBadClass(element) {
+    const label = element.nextElementSibling;
+    label.classList.remove("bad");
+}
+function setLabelText(element, msg) {
+    const label = element.nextElementSibling;
+    label.textContent = msg;
+}
+
+function isEmail() {}
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = name_input.value.trim();
+    const email = email_input.value.trim();
+    const message = message_input.value.trim();
+
+    if (name == "") {
+        name_input.focus();
+        addErrorClass(name_input);
+        addBadClass(name_input);
+        setLabelText(name_input, "Please fill in name");
+        return;
+    } else {
+        addSuccessClass(name_input);
+        addGoodClass(name_input);
+    }
+
+    if (email == "") {
+        email_input.focus();
+        addBadClass(email_input);
+        addErrorClass(email_input);
+        setLabelText(email_input, "Please enter email");
+        return;
+    } else {
+        addSuccessClass(email_input);
+        addGoodClass(email_input);
+    }
+
+    if (message == "") {
+        message_input.focus();
+        addBadClass(message_input);
+        addErrorClass(message_input);
+        setLabelText(message_input, "Please enter a message");
+        return;
+    } else {
+        addSuccessClass(message_input);
+        addGoodClass(message_input);
+    }
+
+    form.submit();
+});
+
+
+
+name_input.addEventListener("input", () => {
+    setLabelText(name_input, "Required Field");
+    removeErrorClass(name_input);
+    removeBadClass(name_input);
+});
+
+name_input.addEventListener("blur", () => {
+    if (name_input.value.trim() != "") {
+        addSuccessClass(name_input);
+        addGoodClass(name_input);
+    } else {
+        removeSuccessClass(name_input);
+        removeGoodClass(name_input);
+    }
+});
+
+email_input.addEventListener("input", () => {
+    setLabelText(email_input, "Required Field");
+    removeErrorClass(email_input);
+    removeBadClass(email_input);
+});
+
+email_input.addEventListener("blur", () => {
+    if (email_input.value.trim() != "") {
+        addSuccessClass(email_input);
+        addGoodClass(email_input);
+    } else {
+        removeSuccessClass(email_input);
+        removeGoodClass(email_input);
+    }
+});
+
+message_input.addEventListener("input", () => {
+    setLabelText(message_input, "Required Field");
+    removeErrorClass(message_input);
+    removeBadClass(message_input);
+});
+
+message_input.addEventListener("blur", () => {
+    if (message_input.value.trim() != "") {
+        addSuccessClass(message_input);
+        addGoodClass(message_input);
+    } else {
+        removeSuccessClass(message_input);
+        removeGoodClass(message_input);
+    }
+});
