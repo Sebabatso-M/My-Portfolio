@@ -173,8 +173,12 @@ function setLabelText(element, msg) {
     label.textContent = msg;
 }
 
-function isEmail() {}
+function isEmail(email) {
+    let regex =
+        /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
+    return regex.test(email);
+}
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -200,9 +204,6 @@ form.addEventListener("submit", (e) => {
         addErrorClass(email_input);
         setLabelText(email_input, "Please enter email");
         return;
-    } else {
-        addSuccessClass(email_input);
-        addGoodClass(email_input);
     }
 
     if (message == "") {
@@ -219,12 +220,12 @@ form.addEventListener("submit", (e) => {
     form.submit();
 });
 
-
-
 name_input.addEventListener("input", () => {
     setLabelText(name_input, "Required Field");
     removeErrorClass(name_input);
     removeBadClass(name_input);
+    removeSuccessClass(name_input);
+    removeGoodClass(name_input);
 });
 
 name_input.addEventListener("blur", () => {
@@ -241,10 +242,13 @@ email_input.addEventListener("input", () => {
     setLabelText(email_input, "Required Field");
     removeErrorClass(email_input);
     removeBadClass(email_input);
+    removeSuccessClass(email_input);
+    removeGoodClass(email_input);
 });
 
 email_input.addEventListener("blur", () => {
-    if (email_input.value.trim() != "") {
+    let email = email_input.value.trim();
+    if (email != "" && isEmail(email)) {
         addSuccessClass(email_input);
         addGoodClass(email_input);
     } else {
@@ -253,10 +257,22 @@ email_input.addEventListener("blur", () => {
     }
 });
 
+email_input.addEventListener("change", () => {
+    let email = email_input.value.trim();
+    if (!isEmail(email)) {
+        email_input.focus();
+        addBadClass(email_input);
+        addErrorClass(email_input);
+        setLabelText(email_input, "Please enter valid email");
+    }
+});
+
 message_input.addEventListener("input", () => {
     setLabelText(message_input, "Required Field");
     removeErrorClass(message_input);
     removeBadClass(message_input);
+    removeSuccessClass(message_input);
+    removeGoodClass(message_input);
 });
 
 message_input.addEventListener("blur", () => {
