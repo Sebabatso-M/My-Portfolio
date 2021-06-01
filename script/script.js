@@ -82,17 +82,20 @@ function setActive(scrolled_val, height) {
     const paddingTop = scrollPadding.slice(0, scrollPadding.indexOf("px"));
 
     const about = document.querySelector(".about-me");
+    const skills = document.querySelector(".skills");
     const project = document.querySelector(".projects");
     const contact = document.querySelector(".container-foot");
 
     const home = navigation__links[0];
     const aboutSection = navigation__links[1];
-    const projectSection = navigation__links[2];
-    const contactSection = navigation__links[3];
+    const skillsSection = navigation__links[2];
+    const projectSection = navigation__links[3];
+    const contactSection = navigation__links[4];
 
     const s = parseInt(scrolled_val);
 
     const aboutStart = calcPosPerc(about.offsetTop, paddingTop, height);
+    const skillsStart = calcPosPerc(skills.offsetTop, paddingTop, height);
     const projectStart = calcPosPerc(project.offsetTop, paddingTop, height);
     const contactStart = calcPosPerc(contact.offsetTop, paddingTop, height);
 
@@ -103,11 +106,18 @@ function setActive(scrolled_val, height) {
 
         return;
     }
-    if (s >= aboutStart && s < projectStart) {
+    if (s >= aboutStart && s < skillsStart) {
         addClassActive(aboutSection);
 
         return;
     }
+
+    if (s >= skillsStart && s < projectStart) {
+        addClassActive(skillsSection);
+
+        return;
+    }
+
     if (s >= projectStart && s < contactStart) {
         addClassActive(projectSection);
 
