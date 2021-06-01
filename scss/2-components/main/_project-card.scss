@@ -44,9 +44,8 @@
         flex-direction: column;
         // justify-content: space-evenly;
         // padding-top: to-rem(35);
-    padding: to-rem(35) to-rem(20);
+        padding: to-rem(35) to-rem(20);
         // min-height: to-rem(300);
-
     }
 }
 
@@ -54,17 +53,16 @@
     @include set-mb(25);
     font-weight: 500;
 
-    @include breakpoint(mobile-s){
+    @include breakpoint(mobile-s) {
         font-size: to-rem(20);
     }
-    @include breakpoint(mobile-l){
+    @include breakpoint(mobile-l) {
         font-size: to-rem(22);
     }
 }
 .project-details__desc {
-
-    max-width:  50ch;
-    margin:0 auto;
+    max-width: 50ch;
+    margin: 0 auto;
     margin-bottom: to-rem(50);
 
     @include breakpoint(tablet) {
@@ -87,5 +85,11 @@
 .base {
     .project-img {
         background-image: url("../../../images/desktop-desin.jpg");
+    }
+}
+
+.github {
+    .project-img {
+        background-image: url("../../../images/github-bg.jpg");
     }
 }
