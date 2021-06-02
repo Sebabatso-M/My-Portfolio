@@ -55,7 +55,7 @@
     padding: to-rem($mb-val-s) 0;
 
     position: relative;
-
+    z-index:-1;
     @include breakpoint(mobile-s) {
         padding-top: to-rem(60);
     }
