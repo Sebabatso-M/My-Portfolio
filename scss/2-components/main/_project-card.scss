@@ -71,7 +71,7 @@
 }
 
 .tech-stack {
-    @include set-mb(50);
+    @include set-mb(30);
 
     text-align: center;
 
@@ -113,5 +113,9 @@
 .github {
     .project-img {
         background-image: url("../../../images/github-bg.jpg");
+    }
+
+    .more-btn .btn-img{
+        background-image: url("../../svgs/link.svg");
     }
 }
