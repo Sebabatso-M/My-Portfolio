@@ -63,10 +63,26 @@
 .project-details__desc {
     max-width: 50ch;
     margin: 0 auto;
-    margin-bottom: to-rem(50);
+    margin-bottom: to-rem(25);
 
     @include breakpoint(tablet) {
         @include set-mb(20);
+    }
+}
+
+.tech-stack {
+    @include set-mb(50);
+
+    text-align: center;
+
+    &__pin {
+        @include set-mb(10);
+
+        display: inline-block;
+        background-color: $m-grey;
+        border-radius: to-rem(6);
+        color: $white;
+        padding: to-rem(5) to-rem(8);
     }
 }
 

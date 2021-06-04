@@ -1,6 +1,5 @@
 .skill-icon{
-    @include set-mb(50);
-
+    margin: 0 to-rem(10) to-rem(50) to-rem(10);
     width: to-rem(110);
     height: to-rem(110);
 }
