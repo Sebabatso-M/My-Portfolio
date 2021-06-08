@@ -1,0 +1,34 @@
+.skills-exp {
+    @include --flex;
+
+    justify-content: center;
+    color: $m-grey;
+    margin:0 auto;
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__item {
+        @include --flex;
+        @include set-mb(20);
+
+        align-items: center;
+        position: relative;
+        padding-left: to-rem(45);
+        text-align: left;
+        z-index: -1;
+    }
+
+    &__item::before {
+        content: '';
+        display: block;
+        width: to-rem(30);
+        height: to-rem(30);
+        background: url('../../../svgs/task_logo.svg');
+        background-size: cover;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+}

@@ -6,4 +6,8 @@
 
     max-width: to-rem(612);
     margin: 0 auto;
+
+    &:nth-child(2){
+        @include set-mb(35);
+    }
 }
