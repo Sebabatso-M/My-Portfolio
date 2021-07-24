@@ -2,7 +2,7 @@
     background-color: $d-grey;
 
     position: sticky;
-    top: 0;
+    top: to-rem(-0.5);
 }
 
 .header__inner {
