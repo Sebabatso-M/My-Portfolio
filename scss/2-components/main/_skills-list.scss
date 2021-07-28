@@ -1,34 +1,68 @@
 .skills-exp {
-    @include --flex;
-
-    justify-content: center;
     color: $m-grey;
-    margin:0 auto;
-
-    &__list {
-        list-style-type: none;
-    }
+    max-width: to-rem(612);
+    margin: 0 auto;
 
     &__item {
-        @include --flex;
-        @include set-mb(20);
-
-        align-items: center;
-        position: relative;
-        padding-left: to-rem(45);
-        text-align: left;
+        background: $white;
+        box-shadow: 0 to-rem(6) to-rem(8) to-rem(2) rgba(116, 116, 116, 0.514);
+        border-radius: to-rem(6);
+        padding: to-rem(25) to-rem(5);
+        padding-bottom: to-rem(10);
+        margin-bottom: to-rem($mb-val-s);
         z-index: -1;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+
+        @include breakpoint(mobile-m) {
+            padding: to-rem(25) to-rem(10);
+            padding-bottom: to-rem(20);
+        }
     }
 
-    &__item::before {
-        content: '';
-        display: block;
-        width: to-rem(30);
-        height: to-rem(30);
+    &__text {
+        max-width: 50ch;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+
         background: url('../../../svgs/task_logo.svg');
         background-size: cover;
-        position:absolute;
-        top:0;
-        left:0;
+        position: absolute;
+        top: to-rem(-20);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
     }
+    // &__list {
+    //     list-style-type: none;
+    // }
+
+    // &__item {
+    //     @include --flex;
+    //     @include set-mb(20);
+
+    //     align-items: center;
+    //     position: relative;
+    //     padding-left: to-rem(45);
+    //     text-align: left;
+    //     z-index: -1;
+    // }
+
+    // &__item::before {
+    //     content: '';
+    //     display: block;
+    //     width: to-rem(30);
+    //     height: to-rem(30);
+    //     background: url('../../../svgs/task_logo.svg');
+    //     background-size: cover;
+    //     position:absolute;
+    //     top:0;
+    //     left:0;
+    // }
 }
