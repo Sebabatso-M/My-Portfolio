@@ -5,34 +5,48 @@
     color: $d-grey;
     text-align: center;
     padding-top: 10vh;
-}
 
-.mailbox {
-    width: 80%;
-    height: 50%;
-    background: url('../../svgs/sent.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    max-width: to-rem(326);
+    .mailbox {
+        width: 60%;
+        height: 25%;
+        background: url('../../svgs/sent.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        max-width: to-rem(326);
 
-    @include breakpoint(mobile-m) {
-        margin-bottom: to-rem(50);
+        @media (min-width: to-em(300)) {
+            width: 80%;
+            height: 40%;
+        }
+        @media (min-width: to-em(334)) {
+            height: 55%;
+        }
+        @include breakpoint(mobile-m) {
+            margin-bottom: to-rem(50);
+        }
+        @include breakpoint(mobile-s) {
+            height: 45%;
+        }
     }
-}
 
-.message {
-    text-align: center;
-    font-size: to-rem(24);
-    font-weight: normal;
-    padding: 0 to-rem(12);
-    margin-bottom: to-rem(30);
+    .message {
+        text-align: center;
+        font-size: to-rem(20);
+        font-weight: normal;
+        padding: 0 to-rem(12);
+        margin-bottom: to-rem(30);
 
-    @include breakpoint(mobile-l) {
-        font-size: to-rem(28);
+        @media (min-width: to-em(326)) {
+            font-size: to-rem(24);
+        }
+
+        @include breakpoint(mobile-l) {
+            font-size: to-rem(28);
+        }
     }
-}
 
-.back-home {
-    margin: 0 auto;
+    .back-home {
+        margin: 0 auto;
+    }
 }
