@@ -1,0 +1,38 @@
+.message-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: $d-grey;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.mailbox {
+    width: 80%;
+    height: 50%;
+    background: url('../../svgs/sent.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    max-width: to-rem(326);
+
+    @include breakpoint(mobile-m) {
+        margin-bottom: to-rem(50);
+    }
+}
+
+.message {
+    text-align: center;
+    font-size: to-rem(24);
+    font-weight: normal;
+    padding: 0 to-rem(12);
+    margin-bottom: to-rem(30);
+
+    @include breakpoint(mobile-l) {
+        font-size: to-rem(28);
+    }
+}
+
+.back-home {
+    margin: 0 auto;
+}
