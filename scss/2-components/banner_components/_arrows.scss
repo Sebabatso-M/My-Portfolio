@@ -1,26 +1,26 @@
-.arrow{
-    animation: move 0.9s ease-in-out 0.5s 5;
+.arrow {
+    animation: move 0.9s ease-in-out 0.5s 3;
 
     width: to-rem(46);
 
-    @include breakpoint(mobile-m){
+    @include breakpoint(mobile-m) {
         width: to-rem(48);
     }
 
-    @include breakpoint(mobile-ls){
+    @include breakpoint(mobile-ls) {
         width: to-rem(51);
     }
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         transform: translateY(0);
     }
-    90%{
+    90% {
         transform: translateY(to-rem(30));
     }
 
-    to{
+    to {
         transform: translateY(0);
     }
 }
